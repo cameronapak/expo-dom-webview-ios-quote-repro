@@ -19,7 +19,18 @@ npm run ios       # -> BLANK screen, "Top OS ... is not defined" in Metro logs
 npm run android   # -> renders '"Source Serif 4", serif' correctly
 ```
 
-(A dev build, not Expo Go.)
+(A dev build, not Expo Go. All deps are already in `package.json`.)
+
+### Built from a blank template with
+
+```bash
+npx create-expo-app@latest dom-quote-repro --template blank-typescript
+npx expo install @expo/dom-webview @expo/metro-runtime react-dom react-native-web expo-dev-client
+```
+
+(`@expo/dom-webview` is the native module; the other three are the JS deps DOM
+components need to bundle for web; `expo-dev-client` is only so the dev build can
+be pointed at a non-default Metro port — not required to reproduce.)
 
 ## The whole repro
 
