@@ -1,6 +1,6 @@
 # Repro: `@expo/dom-webview` (iOS) corrupts DOM-component props containing a `"`
 
-Minimal reproduction for **[expo/expo#47014](https://github.com/expo/expo/issues/47014)**.
+Minimal reproduction for **[expo/expo#47016](https://github.com/expo/expo/issues/47016)**.
 
 A `'use dom'` component renders **blank on iOS** when any prop value contains a
 double quote (`"`). The visible error is misleading:
